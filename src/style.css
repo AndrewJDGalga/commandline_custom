@@ -4,3 +4,10 @@ body {
     color: whitesmoke;
 }
 
+.cmd__line {
+    width: 100%;
+    height: 1em;
+    background-color: inherit;
+    color: inherit;
+    border: none;
+}
