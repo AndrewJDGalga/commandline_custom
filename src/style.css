@@ -4,8 +4,8 @@ body {
     color: whitesmoke;
 }
 
-.cmd__line {
-    width: 100%;
+#cmd__line {
+    width: auto;
     height: 1em;
     background-color: inherit;
     color: inherit;

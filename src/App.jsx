@@ -5,7 +5,8 @@ function App() {
     return (
         <main>
             <form className="cmd">
-                <textarea className="cmd__line"></textarea>
+                <label htmlFor="cmd__line">andrewjonhard.com&gt;</label>
+                <input id="cmd__line" />
             </form>
         </main>
     )
