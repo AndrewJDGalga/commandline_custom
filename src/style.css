@@ -2,6 +2,7 @@
 body {
     background-color: black;
     color: whitesmoke;
+    margin: 0;
 }
 
 #cmd__line {
@@ -12,11 +13,21 @@ body {
     border: none;
 }
 
+.cmd__in__mobile {
+    display: none;
+}
+.cmd__in__mobile button {
+    font-size: 1.5em;
+    padding: 4px;
+}
+
 @media (max-width: 640px) {
     .cmd__in {
         display: none;
     }
     .cmd__in__mobile {
-        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }
