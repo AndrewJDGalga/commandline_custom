@@ -11,3 +11,12 @@ body {
     color: inherit;
     border: none;
 }
+
+@media (max-width: 640px) {
+    .cmd__in {
+        display: none;
+    }
+    .cmd__in__mobile {
+        display: block;
+    }
+}

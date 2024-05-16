@@ -1,6 +1,7 @@
 import { createElement } from 'react';
 import './style.css';
 
+const acceptedCommands = ['h', ]
 
 function App() {
 
@@ -20,6 +21,11 @@ function App() {
     return (
         <main>
             <div id="cmd__out"></div>
+            <form className="cmd__in__mobile">
+                <button type="submit" value="portfolio">Portfolio</button>
+                <button type="submit" value="about">About</button>
+                <button type="submit" value="contact">Contact</button>
+            </form>
             <form className="cmd__in" onSubmit={userCommand}>
                 <label htmlFor="cmd__line">andrewjonhard.com&gt;</label>
                 <input id="cmd__line" />
