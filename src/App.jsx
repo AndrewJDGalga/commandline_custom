@@ -7,7 +7,7 @@ const commandReducer = (state, action) => {
             return <p>contact@andrewjonhardt.com</p>;
         case 'portfolio':
             return (
-                <article>
+                <article className='portfolio'>
                     <section>
                         <img src="./current_site.png" />
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quibusdam tempore quod libero rerum necessitatibus sapiente ab maxime, veniam aut deleniti fugit dicta eveniet impedit itaque similique eaque quo minus!</p>
