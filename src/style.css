@@ -22,9 +22,23 @@ body {
     padding: 4px;
 }
 
+.portfolio section {
+    margin-top: 16px;
+}
+
 .portfolio section img {
-    width: 100%;
+    width: 90%;
     height: auto;
+    padding: 0 16px;
+    margin-top: 16px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+.portfolio section h2 {
+    text-align: center;
+    margin: 0;
 }
 .portfolio section p {
     width: 95%;

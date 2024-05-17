@@ -10,6 +10,12 @@ const commandReducer = (state, action) => {
                 <article className='portfolio'>
                     <section>
                         <img src="./current_site.png" />
+                        <h2>Lorem ipsum dolor sit</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quibusdam tempore quod libero rerum necessitatibus sapiente ab maxime, veniam aut deleniti fugit dicta eveniet impedit itaque similique eaque quo minus!</p>
+                    </section>
+                    <section>
+                        <img src="./current_site.png" />
+                        <h2>Lorem ipsum dolor sit</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quibusdam tempore quod libero rerum necessitatibus sapiente ab maxime, veniam aut deleniti fugit dicta eveniet impedit itaque similique eaque quo minus!</p>
                     </section>
                 </article>
