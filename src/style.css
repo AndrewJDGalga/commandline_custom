@@ -15,6 +15,7 @@ body {
 
 .cmd__in__mobile {
     display: none;
+    margin-top: 16px;
 }
 .cmd__in__mobile button {
     font-size: 1.5em;
