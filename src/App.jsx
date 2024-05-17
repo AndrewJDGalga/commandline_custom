@@ -3,8 +3,15 @@ import './style.css';
 
 const commandReducer = (state, action) => {
     switch(action.type){
+        case 'about':
+            return (
+                <article className='about'>
+                    <h2>About Me</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, commodi sit deserunt quam, cumque, similique quis incidunt numquam omnis impedit ut necessitatibus magni dolores voluptatem laborum atque mollitia quaerat earum?</p>
+                </article>
+            );
         case 'email':
-            return <p>contact@andrewjonhardt.com</p>;
+            return <p className='center-text'>contact@andrewjonhardt.com</p>;
         case 'portfolio':
             return (
                 <article className='portfolio'>
@@ -21,7 +28,7 @@ const commandReducer = (state, action) => {
                 </article>
             );
         default:
-            return <p>Unknown command, try "help"</p>;
+            return <p className='center-text'>Unknown command, try "help"</p>;
     }
 }
 
@@ -33,6 +40,9 @@ function App() {
         const command = e.nativeEvent.submitter.value.toLowerCase()[0] ?? '';
 
         switch(command) {
+            case 'a':
+                dispatch({type:'about'});
+                break;
             case 'e':
                 dispatch({type:'email'});
                 break;
@@ -46,7 +56,6 @@ function App() {
 
     return (
         <main>
-            {output}
             <form className="cmd__in__mobile" onSubmit={userCommand}>
                 <button type="submit" value="portfolio">Portfolio</button>
                 <button type="submit" value="about">About</button>
@@ -56,6 +65,7 @@ function App() {
                 <label htmlFor="cmd__line">andrewjonhard.com&gt;</label>
                 <input id="cmd__line" />
             </form>
+            {output}
         </main>
     )
 }
