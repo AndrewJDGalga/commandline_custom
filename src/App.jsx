@@ -4,15 +4,23 @@ import './style.css';
 const commandReducer = (state, action) => {
     switch(action.type){
         case 'email':
-            return 'contact@andrewjonhardt.com';
+            return <p>contact@andrewjonhardt.com</p>;
+        case 'portfolio':
+            return (
+                <article>
+                    <section>
+                        <img src="./current_site.png" />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quibusdam tempore quod libero rerum necessitatibus sapiente ab maxime, veniam aut deleniti fugit dicta eveniet impedit itaque similique eaque quo minus!</p>
+                    </section>
+                </article>
+            );
         default:
-            return 'Unknown command, try "help".';
+            return <p>Unknown command, try "help"</p>;
     }
 }
 
 function App() {
     const [output, dispatch] = useReducer(commandReducer, '');
-    
 
     const userCommand = (e) => {
         e.preventDefault();
@@ -22,11 +30,12 @@ function App() {
             case 'e':
                 dispatch({type:'email'});
                 break;
+            case 'p':
+                dispatch({type:'portfolio'});
+                break;
             default:
                 dispatch({type:command});
         }
-
-        
     }
 
     return (
