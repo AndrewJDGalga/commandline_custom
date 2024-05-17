@@ -4,9 +4,9 @@ import './style.css';
 const commandReducer = (state, action) => {
     switch(action.type){
         case 'email':
-            return [...state, 'contact@andrewjonhardt.com'];
+            return 'contact@andrewjonhardt.com';
         default:
-            return [...state, 'Unknown command, try "help".'];
+            return 'Unknown command, try "help".';
     }
 }
 
@@ -18,7 +18,15 @@ function App() {
         e.preventDefault();
         const command = e.nativeEvent.submitter.value.toLowerCase()[0] ?? '';
 
-        dispatch({type:command});
+        switch(command) {
+            case 'e':
+                dispatch({type:'email'});
+                break;
+            default:
+                dispatch({type:command});
+        }
+
+        
     }
 
     return (
